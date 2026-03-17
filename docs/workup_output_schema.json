@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Denial Workup Output",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "denial_taxonomy",
+    "payment_analysis",
+    "pursuit_recommendation",
+    "reasons",
+    "missing_fields",
+    "open_questions",
+    "recommended_next_steps",
+    "supporting_playbook_citations",
+    "draft_narrative",
+    "trace"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "denial_taxonomy": {
+      "type": "object",
+      "required": [
+        "category",
+        "confidence"
+      ],
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "payment_analysis": {
+      "type": "object",
+      "required": [
+        "billed_amount",
+        "paid_amount",
+        "coverage_ratio",
+        "co45_contract_paid_gate"
+      ],
+      "properties": {
+        "billed_amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "paid_amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "coverage_ratio": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "co45_contract_paid_gate": {
+          "type": "boolean"
+        }
+      }
+    },
+    "pursuit_recommendation": {
+      "type": "string",
+      "enum": [
+        "pursue",
+        "do_not_pursue",
+        "needs_info"
+      ]
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_next_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "step",
+          "detail",
+          "citations"
+        ],
+        "properties": {
+          "step": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "citations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "supporting_playbook_citations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "draft_narrative": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "trace": {
+      "type": "object",
+      "required": [
+        "model_api",
+        "tools_called"
+      ],
+      "properties": {
+        "model_api": {
+          "type": "string",
+          "enum": [
+            "responses"
+          ]
+        },
+        "tools_called": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "reason"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

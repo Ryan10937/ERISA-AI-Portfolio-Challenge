@@ -1,0 +1,431 @@
+denial_code,denial_text,label
+CO-27,Denied: expenses incurred after coverage terminated. See payer portal for details.,eligibility
+CO-27,Denied: expenses incurred after coverage terminated. Please review and resubmit.,eligibility
+CO-97,Denied: bundled/considered part of another procedure already paid.,coding_bundling
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-197,Denied: authorization required but not obtained.,other
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-197,Denied: authorization required but not obtained.,other
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-50,Denied: clinical documentation does not support billed level of service. Include supporting documentation.,medical_necessity
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-16,Denied: claim/service lacks information needed for adjudication; missing progress notes. Follow plan guidelines.,missing_info
+CO-27,Denied: services after termination date of coverage. Include supporting documentation.,eligibility
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration. See payer portal for details.,medical_necessity
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable. Please review and resubmit.,underpayment
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-27,Denied: eligibility issue — coverage terminated. Include supporting documentation.,eligibility
+CO-97,Denied: bundled/considered part of another procedure already paid.,coding_bundling
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement. Please review and resubmit.,underpayment
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration. Follow plan guidelines.,medical_necessity
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-50,DENIED.,medical_necessity
+CO-97,Denied: benefit included in allowance for another service; bundled. Please review and resubmit.,coding_bundling
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide itemized bill. Follow plan guidelines.,missing_info
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-16,Denied: submission/billing error(s). Correct place of service and resubmit with proof of timely transmission.,missing_info
+CO-16,Denied: missing/incomplete information. Please submit operative report.,missing_info
+CO-16,Denied: claim/service lacks information needed for adjudication; missing authorization number.,missing_info
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-16,Denied: missing/incomplete information. Please submit authorization number.,missing_info
+CO-197,Denied: authorization required but not obtained.,other
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-197,Denied: notification/pre-treatment authorization missing. See payer portal for details.,other
+CO-97,Denied: bundled/considered part of another procedure already paid. Follow plan guidelines.,coding_bundling
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-16,Denied: claim/service lacks information needed for adjudication; missing progress notes. Please review and resubmit.,missing_info
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement.,coding_bundling
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-16,Denied: missing/incomplete information. Please submit imaging report.,missing_info
+CO-16,Denied: claim/service lacks information needed for adjudication; missing H&P (history and physical). Include supporting documentation.,missing_info
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,underpayment
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line. Follow plan guidelines.,coding_bundling
+CO-16,Denied: missing/incomplete information. Please submit proof of timely transmission.,missing_info
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,eligibility
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-29,Denied: claim received after filing deadline. Include supporting documentation.,timely_filing
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-197,Denied: precertification/authorization absent; no prior auth on file. Follow plan guidelines.,other
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-197,Denied: notification/pre-treatment authorization missing. Include supporting documentation.,other
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-45,Allowed amount reduced to contract rate (CO-45). See payer portal for details.,underpayment
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS. Include supporting documentation.,eligibility
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-50,Denied: medical necessity not supported by records submitted. Follow plan guidelines.,medical_necessity
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,eligibility
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable. See payer portal for details.,underpayment
+CO-16,Denied: claim/service lacks information needed for adjudication; missing imaging report.,missing_info
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-27,Denied: expenses incurred after coverage terminated. Follow plan guidelines.,eligibility
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement.,coding_bundling
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-97,Denied: bundled/considered part of another procedure already paid. See payer portal for details.,coding_bundling
+CO-16,Denied: submission/billing error(s). Correct billing taxonomy and resubmit with eligibility verification.,missing_info
+CO-29,DENIED.,timely_filing
+CO-197,Denied: notification/pre-treatment authorization missing. Include supporting documentation.,other
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-97,DENIED.,coding_bundling
+CO-27,Denied: services after termination date of coverage. Include supporting documentation.,eligibility
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-197,Denied: authorization required but not obtained.,other
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide authorization number.,missing_info
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-27,Denied: expenses incurred after coverage terminated. Please review and resubmit.,eligibility
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line. See payer portal for details.,coding_bundling
+CO-197,Denied: authorization required but not obtained.,other
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide H&P (history and physical).,missing_info
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-45,Allowed amount reduced to contract rate (CO-45). Include supporting documentation.,underpayment
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,underpayment
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-27,Denied: services after termination date of coverage. See payer portal for details.,eligibility
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-16,Denied: claim/service lacks information needed for adjudication; missing proof of timely transmission.,missing_info
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,eligibility
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement.,coding_bundling
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement. Please review and resubmit.,coding_bundling
+CO-50,Denied: clinical documentation does not support billed level of service. Please review and resubmit.,medical_necessity
+CO-197,Denied: authorization required but not obtained.,other
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-16,Denied: claim/service lacks information needed for adjudication; missing itemized bill.,missing_info
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-29,Denied: claim received after filing deadline. Follow plan guidelines.,timely_filing
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line. Include supporting documentation.,coding_bundling
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,eligibility
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables. Include supporting documentation.,underpayment
+CO-197,Denied: notification/pre-treatment authorization missing. Include supporting documentation.,other
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-27,Denied: eligibility issue — coverage terminated. See payer portal for details.,eligibility
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,underpayment
+CO-16,Denied: submission/billing error(s). Correct place of service and resubmit with proof of timely transmission.,missing_info
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-197,Denied: authorization required but not obtained.,other
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-45,Allowed amount reduced to contract rate (CO-45). See payer portal for details.,underpayment
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable. Please review and resubmit.,underpayment
+CO-16,Denied: claim/service lacks information needed for adjudication; missing imaging report.,missing_info
+CO-197,Denied: authorization required but not obtained.,other
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-29,Denied: late submission outside payer filing window. Follow plan guidelines.,timely_filing
+CO-197,DENIED.,other
+CO-97,DENIED.,coding_bundling
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-50,Denied: medical necessity not supported by records submitted. Please review and resubmit.,medical_necessity
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide operative report.,missing_info
+CO-29,Denied: late submission outside payer filing window. Please review and resubmit.,timely_filing
+CO-50,Denied: services not deemed medical necessity by payer. Follow plan guidelines.,medical_necessity
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-50,Denied: medical necessity not supported by records submitted. Follow plan guidelines.,medical_necessity
+CO-16,Denied: claim/service lacks information needed for adjudication; missing eligibility verification.,missing_info
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-197,Denied: precertification/authorization absent; no prior auth on file. See payer portal for details.,other
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,eligibility
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement.,coding_bundling
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-197,Denied: authorization required but not obtained.,other
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide H&P (history and physical).,missing_info
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-16,Denied: claim/service lacks information needed for adjudication; missing imaging report.,missing_info
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,underpayment
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide authorization number.,missing_info
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-16,Denied: submission/billing error(s). Correct provider NPI and resubmit with EOB with remark codes.,missing_info
+CO-197,Denied: authorization required but not obtained.,other
+CO-16,Denied: missing/incomplete information. Please submit proof of timely transmission.,missing_info
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-29,Denied for timely filing: filing limit exceeded. See payer portal for details.,timely_filing
+CO-97,DENIED.,coding_bundling
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide authorization number.,missing_info
+CO-16,Denied: claim/service lacks information needed for adjudication; missing eligibility verification. Please review and resubmit.,missing_info
+CO-197,Denied: authorization required but not obtained. See payer portal for details.,other
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide imaging report. Follow plan guidelines.,missing_info
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration. Please review and resubmit.,medical_necessity
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-16,Denied: missing/incomplete information. Please submit itemized bill. Include supporting documentation.,missing_info
+CO-97,Denied: bundled/considered part of another procedure already paid.,coding_bundling
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable. Follow plan guidelines.,underpayment
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide H&P (history and physical). Include supporting documentation.,missing_info
+CO-197,Denied: authorization required but not obtained.,other
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide operative report.,missing_info
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration. See payer portal for details.,medical_necessity
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-97,Denied: bundled/considered part of another procedure already paid. Please review and resubmit.,coding_bundling
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-29,Denied: time limit for filing has expired per plan policy. Follow plan guidelines.,timely_filing
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-16,Denied: missing/incomplete information. Please submit imaging report. Follow plan guidelines.,missing_info
+CO-29,Denied for timely filing: filing limit exceeded.,timely_filing
+CO-16,Denied: submission/billing error(s). Correct billing taxonomy and resubmit with itemized bill.,missing_info
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables. Please review and resubmit.,underpayment
+CO-29,Denied for timely filing: filing limit exceeded. See payer portal for details.,timely_filing
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,underpayment
+CO-197,Denied: authorization required but not obtained.,other
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-97,Denied: bundled/considered part of another procedure already paid.,coding_bundling
+CO-50,Denied: services not deemed medical necessity by payer. Include supporting documentation.,medical_necessity
+CO-16,Denied: claim/service lacks information needed for adjudication; missing operative report.,missing_info
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-197,Denied: authorization required but not obtained.,other
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide itemized bill.,missing_info
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,eligibility
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-29,Denied: claim received after filing deadline. See payer portal for details.,timely_filing
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide progress notes.,missing_info
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-50,Denied: services not deemed medical necessity by payer. Include supporting documentation.,medical_necessity
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide itemized bill.,missing_info
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-16,Denied: submission/billing error(s). Correct place of service and resubmit with operative report.,missing_info
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide authorization number.,missing_info
+CO-27,Denied: eligibility issue — coverage terminated. Follow plan guidelines.,eligibility
+CO-29,DENIED.,timely_filing
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables. Follow plan guidelines.,underpayment
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-97,Denied: bundled/considered part of another procedure already paid. See payer portal for details.,coding_bundling
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide authorization number.,missing_info
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide itemized bill.,missing_info
+CO-97,Denied: bundled/considered part of another procedure already paid. Follow plan guidelines.,coding_bundling
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,underpayment
+CO-27,Denied: expenses incurred after coverage terminated. Include supporting documentation.,eligibility
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-29,Denied: claim received after filing deadline. See payer portal for details.,timely_filing
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable. Include supporting documentation.,underpayment
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-16,Denied: submission/billing error(s). Correct provider NPI and resubmit with progress notes.,missing_info
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide EOB with remark codes.,missing_info
+CO-29,Denied: late submission outside payer filing window. Include supporting documentation.,timely_filing
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration. Include supporting documentation.,medical_necessity
+CO-97,Denied: bundled/considered part of another procedure already paid.,coding_bundling
+CO-45,Allowed amount reduced to contract rate (CO-45). Include supporting documentation.,underpayment
+CO-27,Denied: eligibility issue — coverage terminated. See payer portal for details.,eligibility
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,medical_necessity
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement. Please review and resubmit.,coding_bundling
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement.,coding_bundling
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS. See payer portal for details.,eligibility
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-16,Denied: claim/service lacks information needed for adjudication; missing proof of timely transmission.,missing_info
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables. See payer portal for details.,underpayment
+CO-197,Denied: precertification/authorization absent; no prior auth on file. See payer portal for details.,other
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,eligibility
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables. Include supporting documentation.,underpayment
+CO-16,Denied: claim/service lacks information needed for adjudication; missing progress notes. Include supporting documentation.,missing_info
+CO-97,Denied: bundled/considered part of another procedure already paid. Include supporting documentation.,coding_bundling
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-27,Denied: eligibility issue — coverage terminated. Follow plan guidelines.,eligibility
+CO-16,Denied: missing/incomplete information. Please submit clinical notes.,missing_info
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,underpayment
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration. Please review and resubmit.,medical_necessity
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-50,Denied: medical necessity not supported by records submitted. Follow plan guidelines.,medical_necessity
+CO-29,Denied: claim received after filing deadline. Include supporting documentation.,timely_filing
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-50,Denied: not medically necessary. Documentation does not support intensity/duration. Include supporting documentation.,medical_necessity
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-97,Denied: bundled/considered part of another procedure already paid.,coding_bundling
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-16,Denied: missing/incomplete information. Please submit operative report.,missing_info
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement.,coding_bundling
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-29,Denied: late submission outside payer filing window. Please review and resubmit.,timely_filing
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement.,coding_bundling
+CO-27,Denied: eligibility issue — coverage terminated. See payer portal for details.,eligibility
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,underpayment
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-50,Denied: medical necessity not supported by records submitted. Please review and resubmit.,medical_necessity
+CO-50,Denied: medical necessity not supported by records submitted. Include supporting documentation.,medical_necessity
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-27,Denied: services after termination date of coverage. Include supporting documentation.,eligibility
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-197,Denied: authorization required but not obtained. Please review and resubmit.,other
+CO-29,Denied: late submission outside payer filing window. Follow plan guidelines.,timely_filing
+CO-197,Denied: authorization required but not obtained.,other
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,underpayment
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement. See payer portal for details.,underpayment
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-97,Denied: bundled/considered part of another procedure already paid.,coding_bundling
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS. Follow plan guidelines.,eligibility
+CO-50,Denied: services not deemed medical necessity by payer.,medical_necessity
+CO-50,DENIED.,medical_necessity
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-16,Denied: missing/incomplete information. Please submit imaging report.,missing_info
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-50,Denied: clinical documentation does not support billed level of service. Include supporting documentation.,medical_necessity
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-16,Denied: missing/incomplete information. Please submit EOB with remark codes.,missing_info
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-16,Denied: claim/service lacks information needed for adjudication; missing authorization number. Please review and resubmit.,missing_info
+CO-27,Denied: expenses incurred after coverage terminated.,eligibility
+CO-29,Denied: time limit for filing has expired per plan policy.,timely_filing
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-29,Denied for timely filing: filing limit exceeded. Include supporting documentation.,timely_filing
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-27,Denied: services after termination date of coverage.,eligibility
+CO-45,Allowed amount reduced to contract rate (CO-45).,underpayment
+CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,underpayment
+CO-97,Denied: benefit included in allowance for another service; bundled.,coding_bundling
+CO-16,Denied: submission/billing error(s). Correct patient demographics and resubmit with proof of timely transmission.,missing_info
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide eligibility verification.,missing_info
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-16,Denied: claim/service lacks information needed for adjudication; missing authorization number.,missing_info
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-29,Denied for timely filing: filing limit exceeded. See payer portal for details.,timely_filing
+CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide H&P (history and physical).,missing_info
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-50,Denied: clinical documentation does not support billed level of service. Follow plan guidelines.,medical_necessity
+CO-97,Denied: bundled/considered part of another procedure already paid.,coding_bundling
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-29,Denied: time limit for filing has expired per plan policy. Follow plan guidelines.,timely_filing
+CO-97,DENIED.,coding_bundling
+CO-97,Denied: included in payment for primary procedure; no separate reimbursement. Follow plan guidelines.,coding_bundling
+CO-29,Denied: time limit for filing has expired per plan policy. See payer portal for details.,timely_filing
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement. Follow plan guidelines.,underpayment
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-197,Denied: precertification/authorization absent; no prior auth on file.,other
+CO-16,Denied: missing/incomplete information. Please submit clinical notes.,missing_info
+CO-197,Denied: authorization required but not obtained.,other
+CO-29,Denied: claim received after filing deadline.,timely_filing
+CO-27,Denied: eligibility issue — coverage terminated.,eligibility
+CO-197,Denied: authorization required but not obtained.,other
+CO-27,Denied: services after termination date of coverage. See payer portal for details.,eligibility
+CO-197,Denied: authorization required but not obtained.,other
+CO-197,Denied: notification/pre-treatment authorization missing.,other
+CO-16,Denied: submission/billing error(s). Correct patient demographics and resubmit with authorization number.,missing_info
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line.,coding_bundling
+CO-50,Denied: clinical documentation does not support billed level of service.,medical_necessity
+CO-29,Denied: late submission outside payer filing window.,timely_filing
+CO-16,Denied: missing/incomplete information. Please submit EOB with remark codes.,missing_info
+CO-29,Denied: late submission outside payer filing window. Please review and resubmit.,timely_filing
+CO-50,Denied: medical necessity not supported by records submitted. See payer portal for details.,medical_necessity
+CO-97,Denied: concurrent procedure rule; included in payment for another adjudicated line. Please review and resubmit.,coding_bundling
+CO-197,Denied: authorization required but not obtained.,other
+CO-16,Denied: claim/service lacks information needed for adjudication; missing progress notes. Follow plan guidelines.,missing_info
+CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement. See payer portal for details.,underpayment
+CO-50,Denied: medical necessity not supported by records submitted.,medical_necessity
+CO-27,Denied: services after termination date of coverage. Please review and resubmit.,eligibility
+CO-16,Denied: submission/billing error(s). Correct diagnosis pointer and resubmit with proof of timely transmission.,missing_info
+CO-50,Denied: medical necessity not supported by records submitted. Include supporting documentation.,medical_necessity
+CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS. Follow plan guidelines.,eligibility
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other
+CO-151,Denied: payer policy adjustment; see remarks.,other

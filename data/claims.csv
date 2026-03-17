@@ -1,0 +1,81 @@
+claim_id,payer,plan_type,denial_code,denial_text,days_since_denial,billed_amount,paid_amount,cpt_codes,icd10_codes,prior_appeals
+C-CO45-001,PayerCo,ERISA,CO-45,Paid per contract. Allowable applied. Charge exceeds fee schedule/maximum allowable.,12,10000.0,7200.0,99223,I10,0
+C-CO45-002,PayerCo,ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,18,10000.0,6300.0,99223,I10,0
+C-MISS-001,Blue Example,ERISA,,Denied: missing operative report and itemized statement. Submit documentation to reconsider.,28,3200.0,0.0,27130,M16.12,0
+C-OOD-001,ACME Health,ERISA,CO-256,Denied: service not payable per managed care contract.,90,5400.0,0.0,29881,M23.20,0
+C-MN-001,ACME Health,ERISA,CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,412,18450.0,0.0,27447,,0
+C-TF-001,Blue Example,ERISA,CO-29,Denied: time limit for filing has expired per plan policy.,15,950.0,0.0,99285,R07.9,0
+C-CO45-003,United Sample,ERISA,CO-45,Allowed amount reduced to contract rate (CO-45).,35,,6000.0,27130,M16.12,0
+C-000008,United Sample,,CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,185,7187.43,668.96,45378;27130,R07.9,1
+C-000009,United Sample,ERISA,CO-16,Denied: submission/billing error(s). Correct patient demographics and resubmit with H&P (history and physical).,216,16551.91,0.0,66984;27130,,1
+C-000010,ACME Health,ERISA,CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide authorization number.,536,15413.78,0.0,45378;66984,M16.12;H25.9,1
+C-000011,United Sample,ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,317,24943.14,10978.64,27447;29881,M16.12;H25.9,1
+C-000012,United Sample,ERISA,CO-29,Denied: claim received after filing deadline.,1195,3098.36,0.0,27447;45378,K52.9,0
+C-000013,Blue Example,ERISA,,Denied: claim/service lacks information needed for adjudication; missing authorization number.,395,15449.15,0.0,93000,I10;M16.12,1
+C-000014,HealthPlan Demo,ERISA,CO-27,Denied: expenses incurred after coverage terminated.,25,6743.25,0.0,45378;99285,R07.9;I10,1
+C-000015,HealthPlan Demo,ERISA,CO-27,Denied: services after termination date of coverage.,48,6154.67,0.0,29881,K52.9;M17.11,0
+C-000016,Blue Example,ERISA,CO-50,Denied: services not deemed medical necessity by payer.,36,8035.86,0.0,27130;66984,,0
+C-000017,United Sample,ERISA,CO-27,Denied: services after termination date of coverage.,10,7479.23,0.0,99223;99285,M17.11;I10,0
+C-000018,ACME Health,ERISA,CO-50,Denied: medical necessity not supported by records submitted.,340,2784.81,0.0,99285,I10,0
+C-000019,PayerCo,NON_ERISA,CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide progress notes.,535,3696.07,0.0,99223,,0
+C-000020,HealthPlan Demo,,,Denied: claim/service lacks information needed for adjudication; missing proof of timely transmission.,109,22989.53,0.0,29881;45378,M17.11,1
+C-000021,PayerCo,ERISA,,Denied: submission/billing error(s). Correct billing taxonomy and resubmit with imaging report.,443,19916.32,0.0,66984,K52.9;M23.20,1
+C-000022,United Sample,ERISA,CO-50,Denied: services not deemed medical necessity by payer.,430,10093.47,0.0,99223;93000,M23.20;H25.9,2
+C-000023,United Sample,ERISA,,Rejected as unprocessable due to incomplete/invalid data. Provide clinical notes.,141,266.73,0.0,99223;45378,K52.9,0
+C-000024,Blue Example,ERISA,CO-29,,1109,18942.0,0.0,27447;45378,M16.12,0
+C-000025,ACME Health,ERISA,CO-16,,798,3521.33,0.0,99223,M16.12;K52.9,0
+C-000026,Blue Example,ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,436,14191.46,9658.66,93000,K52.9;M17.11,2
+C-000027,HealthPlan Demo,ERISA,CO-50,Denied: medical necessity not supported by records submitted.,27,6382.71,0.0,99223,,1
+C-000028,Blue Example,ERISA,CO-97,,877,14949.76,0.0,45378,M17.11;I10,0
+C-000029,ACME Health,ERISA,CO-27,Denied: services after termination date of coverage.,9,1235.71,0.0,66984,K52.9;H25.9,0
+C-000030,HealthPlan Demo,NON_ERISA,CO-16,Denied: claim/service lacks information needed for adjudication; missing itemized bill.,140,9920.6,0.0,99285,K52.9;M17.11,1
+C-000031,Blue Example,ERISA,CO-45,,50,4304.86,0.0,99285;27447,M17.11;K52.9,1
+C-000032,United Sample,ERISA,CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,1095,15781.44,0.0,93000;99285,M16.12;I10,0
+C-000033,HealthPlan Demo,ERISA,CO-45,Allowed amount reduced to contract rate (CO-45).,59,11926.17,4457.81,29881;27447,R07.9,2
+C-000034,ACME Health,ERISA,,Rejected as unprocessable due to incomplete/invalid data. Provide itemized bill.,594,24539.99,0.0,27447;99223,H25.9;M23.20,0
+C-000035,HealthPlan Demo,ERISA,CO-199,Denied: revenue code and procedure code do not match.,28,18378.47,0.0,29881,I10,0
+C-000036,PayerCo,ERISA,CO-29,Denied for timely filing: filing limit exceeded.,1121,7860.89,1411.72,99223,I10;M16.12,0
+C-000037,ACME Health,ERISA,CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,129,2102.05,611.56,66984,M17.11,0
+C-000038,PayerCo,ERISA,CO-16,Denied: submission/billing error(s). Correct place of service and resubmit with proof of timely transmission.,19,19553.44,0.0,29881,,0
+C-000039,United Sample,ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,527,7779.32,4351.92,99223,M17.11;M16.12,1
+C-000040,United Sample,NON_ERISA,CO-29,Denied: claim received after filing deadline.,40,11685.57,0.0,27447,M16.12,1
+C-000041,ACME Health,ERISA,CO-97,Denied: bundled/considered part of another procedure already paid.,162,20280.14,0.0,45378,M16.12,1
+C-000042,PayerCo,ERISA,CO-27,Denied: services after termination date of coverage.,201,22114.74,0.0,99223,I10;H25.9,0
+C-000043,HealthPlan Demo,NON_ERISA,CO-50,Denied: services not deemed medical necessity by payer.,857,19590.52,0.0,45378;99223,M17.11;M16.12,
+C-000044,Blue Example,ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,638,,1968.75,99223,M23.20;M17.11,0
+C-000045,PayerCo,NON_ERISA,,Denied: missing/incomplete information. Please submit authorization number.,,20958.25,0.0,99285;27447,M16.12;H25.9,0
+C-000046,Blue Example,NON_ERISA,CO-16,Denied: medical necessity not supported by records submitted.,151,1724.01,0.0,29881,H25.9,
+C-000047,ACME Health,ERISA,CO-27,Denied: coverage ended prior to date of service; patient not eligible on DOS.,,23730.16,0.0,45378;27447,M17.11;K52.9,0
+C-000048,HealthPlan Demo,ERISA,CO-50,Denied: services not deemed medical necessity by payer.,54,15159.12,0.0,27447,,0
+C-000049,PayerCo,ERISA,CO-16,Denied: submission/billing error(s). Correct provider NPI and resubmit with eligibility verification.,621,1927.92,0.0,27447;45378,,2
+C-000050,ACME Health,NON_ERISA,CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide EOB with remark codes.,1032,5833.17,0.0,27447;66984,M23.20,0
+C-000051,ACME Health,ERISA,CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide authorization number.,44,10925.25,0.0,66984,M16.12,1
+C-000052,PayerCo,ERISA,CO-16,,951,21036.4,0.0,27130,M16.12;I10,0
+C-000053,ACME Health,ERISA,CO-16,Denied: submission/billing error(s). Correct billing taxonomy and resubmit with clinical notes.,210,21133.28,0.0,66984;99223,K52.9;M23.20,0
+C-000054,Blue Example,NON_ERISA,CO-29,Denied: time limit for filing has expired per plan policy.,520,16769.84,0.0,45378,H25.9;R07.9,0
+C-000055,United Sample,ERISA,CO-16,Denied: services not deemed medical necessity by payer.,880,22536.26,0.0,27447,M17.11;H25.9,2
+C-000056,United Sample,ERISA,CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,,8163.8,5000.96,27447,R07.9;I10,0
+C-000057,HealthPlan Demo,ERISA,CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide eligibility verification.,31,3917.94,0.0,27447,,0
+C-000058,PayerCo,ERISA,CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide EOB with remark codes.,266,22266.96,0.0,99223;27130,M23.20;H25.9,0
+C-000059,Blue Example,ERISA,CO-29,Denied for timely filing: filing limit exceeded.,20,6918.14,0.0,27447;93000,M17.11;I10,2
+C-000060,HealthPlan Demo,ERISA,CO-97,Denied: bundled/considered part of another procedure already paid.,54,4550.0,0.0,27130,M16.12,2
+C-000061,ACME Health,ERISA,CO-50,Denied: not medically necessary. Documentation does not support intensity/duration.,36,24022.88,0.0,45378;29881,H25.9,0
+C-000062,Blue Example,ERISA,CO-29,Denied: time limit for filing has expired per plan policy.,10,21649.59,0.0,93000,K52.9,0
+C-000063,PayerCo,ERISA,CO-16,Rejected as unprocessable due to incomplete/invalid data. Provide EOB with remark codes.,239,5650.67,0.0,66984;99285,,0
+C-000064,PayerCo,ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,50,13053.02,11724.59,27130,K52.9;M23.20,0
+C-000065,HealthPlan Demo,NON_ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,1068,16048.26,8498.3,45378;99285,H25.9;M17.11,1
+C-000066,PayerCo,ERISA,CO-16,Denied: clinical documentation does not support billed level of service.,594,21817.95,0.0,45378;29881,R07.9;M23.20,2
+C-000067,HealthPlan Demo,ERISA,,Denied: claim/service lacks information needed for adjudication; missing proof of timely transmission.,488,9696.31,0.0,66984;27130,M17.11,
+C-000068,Blue Example,ERISA,CO-29,Denied: claim received after filing deadline.,36,8007.0,0.0,27130,M23.20;M17.11,0
+C-000069,ACME Health,ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,252,18981.98,7943.29,27130,K52.9,0
+C-000070,ACME Health,ERISA,CO-97,Denied: included in payment for primary procedure; no separate reimbursement.,1111,15010.16,2757.3,66984;45378,M23.20,0
+C-000071,ACME Health,ERISA,CO-27,Denied: expenses incurred after coverage terminated.,741,16350.87,0.0,,H25.9;R07.9,1
+C-000072,United Sample,ERISA,CO-45,Paid per contract; remaining amount adjusted per contracted/legislated arrangement.,21,5336.0,3684.55,99285,K52.9;M16.12,0
+C-000073,PayerCo,ERISA,,Denied: missing/incomplete information. Please submit H&P (history and physical).,569,5193.8,0.0,99223;29881,M23.20;M17.11,2
+C-000074,ACME Health,ERISA,CO-45,Contracted rate applied; adjustment per fee schedule. See EOB for allowables.,354,3941.33,1516.97,27447,M23.20,0
+C-000075,PayerCo,NON_ERISA,CO-29,Denied: claim received after filing deadline.,25,2601.21,0.0,27130,K52.9,0
+C-000076,ACME Health,ERISA,CO-97,Denied: benefit included in allowance for another service; bundled.,154,10156.19,0.0,99285;66984,K52.9;I10,0
+C-000077,HealthPlan Demo,ERISA,CO-97,Denied: bundled/considered part of another procedure already paid.,551,9648.83,0.0,27130;66984,I10,0
+C-000078,HealthPlan Demo,ERISA,CO-45,,897,17283.98,0.0,66984,I10,1
+C-000079,HealthPlan Demo,ERISA,CO-29,Denied for timely filing: filing limit exceeded.,15,21333.81,0.0,27447,M23.20;M17.11,0
+C-000080,Blue Example,ERISA,CO-16,Denied: missing/incomplete information. Please submit eligibility verification.,33,21450.58,0.0,45378;27130,K52.9;H25.9,0
