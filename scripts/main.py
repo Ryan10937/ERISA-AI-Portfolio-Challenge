@@ -39,7 +39,7 @@ async def run_ask(agent: OllamaResponsesAgent, message: str, session_id: str):
     
     result = await agent.run(message, ask=True)
     print(f"\n💬 Response:")
-    pprint(result.final_output)
+    print(result.final_output)
     
     print(f"\n💾 Saved to session: {session_id}")
 
