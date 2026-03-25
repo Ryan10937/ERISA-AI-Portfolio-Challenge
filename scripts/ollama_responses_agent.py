@@ -51,7 +51,6 @@ class OllamaResponsesAgent:
             Path for the SQLite session store.
         """
         self.session = SQLiteSession(
-            # session_id=f"session_at_{time.strftime('%m_%d_%Y_%H_%M')}",
             session_id=session_id,
             db_path=sqlite_path
         )
@@ -75,6 +74,8 @@ class OllamaResponsesAgent:
         self.tools = [
             self._predict_denial_taxonomy_tool(),
             self._retrieve_playbook_tool(),
+            self._gather_ICD10_code_context(),
+            self._gather_CPT_code_context(),
         ]
 
         self.agent = Agent(
@@ -83,12 +84,15 @@ class OllamaResponsesAgent:
             tools=self.tools,
             output_type=CustomDenialSchema(),
             instructions="""You are a patient advocate. 
-Always call the tools predict_denial_taxonomy and retrieve_playbook.
-If you're given a claim information dictionary, then your job is to suggest a recommendation for how to best proceed.
-This recommendation can be one of the following options and nothing else: pursue, do_not_pursue, or needs_info. Always use
-the retrieve_playbook tool to get more information and instructions specific to the type of claim and denial code.
+                            Always call the tools predict_denial_taxonomy and retrieve_playbook.
+                            If you're given a claim information dictionary, then your job is to suggest a recommendation for how to best proceed.
+                            This recommendation can be one of the following options and nothing else: pursue, do_not_pursue, or needs_info. Always use
+                            the retrieve_playbook tool to get more information and instructions specific to the type of claim and denial code.
+                            
+                            Always use the get_ICD10_code_context and get_CPT_code_context tools to get additional medical context if the denial was due to the procedure was not medically necessary.
 
-Alternatively, you may be asked questions about a claim. Answer these questions with text, not conforming to the output schema."""
+                            Ensure format follows output schema specified and JSON format is valid.
+                         """
         )
         
         self.playbook = Playbook('data/playbook_chunks.jsonl')
@@ -96,8 +100,9 @@ Alternatively, you may be asked questions about a claim. Answer these questions 
         self.tag_agent = Agent(
             name="Tag Assigning Agent",
             instructions="""You will be given an insurance claim and asked to assign any number of tags to it. Your first tag will always be 'general'
-If you find any of the following in the claim, it MUST be one of your tags: CO-16, CO-27, CO-29, CO-45, CO-97.
-Also assign any of the following tags if appropriate: coding_bundling, eligibility, general, medical_necessity, missing_info, other, timely_filing, underpayment""",
+                            If you find any of the following in the claim, it MUST be one of your tags: CO-16, CO-27, CO-29, CO-45, CO-97.
+                            Also assign any of the following tags if appropriate: coding_bundling, eligibility, general, medical_necessity, missing_info, other, timely_filing, underpayment
+                         """,
             model=self.model,
         )
 
@@ -106,6 +111,9 @@ Also assign any of the following tags if appropriate: coding_bundling, eligibili
             model=self.model,
             instructions="""You will be asked about a claim within this session. Answer using the history as context."""
         )
+
+        self.icd_10_code_df = pd.read_excel('data/section111_valid_icd10_october2025.xlsx')
+        self.cpt_code_df = pd.read_excel('data/2026_DHS_Code_List_Addendum_12_01_2025.xlsx')
 
     def _predict_denial_taxonomy_tool(self) -> FunctionTool:
         """ML-powered denial taxonomy prediction tool using pre-trained scikit-learn pipeline."""
@@ -191,7 +199,62 @@ Also assign any of the following tags if appropriate: coding_bundling, eligibili
                 "additionalProperties": False,
             },
         )
+    def _gather_ICD10_code_context(self) -> FunctionTool:
 
+        async def get_ICD10_code_context(_: ToolContext, info: dict) -> dict:
+
+            if isinstance(info, str):
+                info = json.loads(info)
+            print('info',info)
+            # icd10_context = [self.icd_10_code_df[self.icd_10_code_df['CODE'] == code]['LONG DESCRIPTION (VALID ICD-10 FY2026)'].to_string(index=False) for code in info['icd10_codes'].split(';')]
+            icd10_context = ''
+            for code in info['icd10_codes'].split(';'):
+                context_to_add = self.icd_10_code_df[self.icd_10_code_df['CODE'] == code]['LONG DESCRIPTION (VALID ICD-10 FY2026)'].to_string(index=False)
+                icd10_context += context_to_add if len(context_to_add) > 1 else ''
+            print(icd10_context)
+            return icd10_context
+
+        return FunctionTool(
+            name="get_ICD10_code_context",
+            description="Get context for why the procedure was performed.",
+            on_invoke_tool=get_ICD10_code_context,
+            params_json_schema={
+                "type": "object",
+                "properties": {
+                    "icd10_codes": {"type": "string", "description": "the ICD-10 code field for the claim"}
+                },
+                "required": ["icd10_codes"],
+                "additionalProperties": False,
+            },
+        )
+    def _gather_CPT_code_context(self) -> FunctionTool:
+
+        async def get_CPT_code_context(_: ToolContext, info: dict) -> dict:
+
+            if isinstance(info, str):
+                info = json.loads(info)
+            print('CPT info',info)
+            # cpt_context = [self.cpt_code_df[self.cpt_code_df['code'] == code] for code in info['cpt_codes'].split(';')]
+            cpt_context = ''
+            for code in info['cpt_codes'].split(';'):
+                context_to_add = self.cpt_code_df[self.cpt_code_df['CODE'] == code]['DEFINITION'].to_string(index=False)
+                cpt_context += context_to_add if len(context_to_add) > 1 else ''
+            print(cpt_context)
+            return cpt_context
+
+        return FunctionTool(
+            name="get_CPT_code_context",
+            description="Get context for which procedure was performed.",
+            on_invoke_tool=get_CPT_code_context,
+            params_json_schema={
+                "type": "object",
+                "properties": {
+                    "cpt_codes": {"type": "string", "description": "the CPT code field for the claim"}
+                },
+                "required": ["cpt_codes"],
+                "additionalProperties": False,
+            },
+        )
     async def run(self, prompt: str, ask: bool = False):
         """
         Send prompt to agent (claim workup or Q&A mode).

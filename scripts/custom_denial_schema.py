@@ -37,7 +37,7 @@ class CustomDenialSchema(AgentOutputSchemaBase):
             }
             if not all(key in result for key in required):
                 raise ValueError("Missing required fields")
-            return result  # Return as dict (no further typing)
+            return result  # Return as dict 
         except json.JSONDecodeError as e:
             raise ValueError(f"Invalid JSON: {e}")  # Use ValueError
         except Exception as e:
