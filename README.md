@@ -40,7 +40,7 @@ The agent analyzes claim denials from claims.csv using a SQLite store and sessio
 python scripts/main.py workup --claim-id C-000009 --session-id Claim1
 ```
 ```json
-✅ Result for C-000009:
+Result for C-000009:
 {'claim_id': 'C-000009',
  'denial_taxonomy': {'category': 'submission/billing error',
                      'confidence': 0.25},
@@ -92,7 +92,7 @@ python scripts/main.py workup --claim-id C-000009 --session-id Claim1
 python scripts/main.py workup --claim-id C-000076 --session-id Claim1
 ```
 ```json
-✅ Result for C-000076:
+Result for C-000076:
 {'claim_id': 'C-000076',
  'denial_taxonomy': {'category': 'bundled service denial', 'confidence': 0.41},
  'draft_narrative': 'The claim was denied because the services are considered '
