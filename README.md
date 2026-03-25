@@ -22,8 +22,8 @@ or
 python scripts/main.py ask --message "Explain your reasoning for those recommended next steps" --session-id SESSION_ID
 ```
 
-## Artchetecture Summary
-The agent does a claim denial analysis of a specified claim from the claims.csv provided. It utilizes a SQLite store and a session key to maintain persistence. The agent runs in two main modes: workup and ask. Both utilize the persistent session history, but have different output goals. The workup output uses a custom output schema class to ensure the model output conforms to the output schema provided in docs/workup_output_schema.json. The ask output is for human readable responses. The model chooses tools when appropriate: _predict_denial_taxonomy_tool, _retrieve_playbook_tool, _gather_ICD10_code_context, and _gather_CPT_code_context. The latter two tools are an innovative addition meant to give the model additional context by translating the ICD10 + CPT codes into meaningful text. This is particularly helpful when the denial reason is medically unnecessary.
+## Architecture Summary
+The agent performs a claim denial analysis of a specified claim from the claims.csv provided. It utilizes a SQLite store and a session key to maintain history. The agent runs in two main modes: workup and ask. Both utilize the persistent session history, but have different output goals. The workup output uses a custom output schema class to ensure the model output conforms to the output schema provided in docs/workup_output_schema.json. The ask output is for human readable responses. The model chooses tools when appropriate: _predict_denial_taxonomy_tool, _retrieve_playbook_tool, _gather_ICD10_code_context, and _gather_CPT_code_context. The latter two tools are an innovative addition meant to give the model additional context by translating the ICD10 + CPT codes into meaningful text. This is particularly helpful when the denial reason is medically unnecessary.
 
 ---
 

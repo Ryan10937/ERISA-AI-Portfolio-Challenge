@@ -21,27 +21,27 @@ async def run_workup(agent: OllamaResponsesAgent, claim_id: str, session_id: str
     
     claim_row = claims_df[claims_df['claim_id'] == claim_id]
     if claim_row.empty:
-        print(f"❌ Claim {claim_id} not found!")
+        print(f"Claim {claim_id} not found!")
         return
     
     claim_dict = claim_row.iloc[0].to_dict()
-    print(f"🔍 Processing claim {claim_id}...")
+    print(f"Processing claim {claim_id}...")
     
     result = await agent.run(str(claim_dict))
-    print(f"\n✅ Result for {claim_id}:")
+    print(f"\nResult for {claim_id}:")
     pprint(result.final_output)
     
     print(f"\n💾 Saved to session: {session_id}")
 
 async def run_ask(agent: OllamaResponsesAgent, message: str, session_id: str):
     """Ask question about existing session."""
-    print(f"❓ Asking: {message}")
+    print(f"Asking: {message}")
     
     result = await agent.run(message, ask=True)
-    print(f"\n💬 Response:")
+    print(f"\nResponse:")
     print(result.final_output)
     
-    print(f"\n💾 Saved to session: {session_id}")
+    print(f"\nSaved to session: {session_id}")
 
 def main():
     parser = argparse.ArgumentParser(description="ERISA Claim Denial Workup Agent")
