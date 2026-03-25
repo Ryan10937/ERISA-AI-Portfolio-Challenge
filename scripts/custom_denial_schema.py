@@ -26,19 +26,34 @@ class CustomDenialSchema(AgentOutputSchemaBase):
     def json_schema(self) -> dict[str, Any]:
         return self._schema  # Returns your exact raw schema
     
+    # def validate_json(self, json_str: str) -> dict[str, Any]:
+    #     try:
+    #         result = json.loads(json_str)
+    #         # Basic validation: check required top-level keys from your schema
+    #         required = {
+    #             "claim_id", "denial_taxonomy", "payment_analysis", "pursuit_recommendation", 
+    #             "reasons", "missing_fields", "open_questions", "recommended_next_steps", 
+    #             "supporting_playbook_citations", "draft_narrative", "trace"
+    #         }
+    #         if not all(key in result for key in required):
+    #             raise ValueError("Missing required fields")
+    #         return result  # Return as dict 
+    #     except json.JSONDecodeError as e:
+    #         raise ValueError(f"Invalid JSON: {e}")  # Use ValueError
+    #     except Exception as e:
+    #         raise ValueError(f"Validation failed: {e}")
     def validate_json(self, json_str: str) -> dict[str, Any]:
         try:
             result = json.loads(json_str)
-            # Basic validation: check required top-level keys from your schema
-            required = {
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Invalid JSON: {e}")
+    
+        required = {
                 "claim_id", "denial_taxonomy", "payment_analysis", "pursuit_recommendation", 
                 "reasons", "missing_fields", "open_questions", "recommended_next_steps", 
                 "supporting_playbook_citations", "draft_narrative", "trace"
             }
-            if not all(key in result for key in required):
-                raise ValueError("Missing required fields")
-            return result  # Return as dict 
-        except json.JSONDecodeError as e:
-            raise ValueError(f"Invalid JSON: {e}")  # Use ValueError
-        except Exception as e:
-            raise ValueError(f"Validation failed: {e}")
+        missing = [k for k in required if k not in result]
+        if missing:
+            raise ValueError(f"Missing required fields: {missing}")
+        return result

@@ -9,6 +9,7 @@ import asyncio
 import argparse
 import sys
 from pathlib import Path
+from pprint import pprint
 
 import pandas as pd
 from ollama_responses_agent import OllamaResponsesAgent
@@ -28,7 +29,7 @@ async def run_workup(agent: OllamaResponsesAgent, claim_id: str, session_id: str
     
     result = await agent.run(str(claim_dict))
     print(f"\n✅ Result for {claim_id}:")
-    print(result.final_output)
+    pprint(result.final_output)
     
     print(f"\n💾 Saved to session: {session_id}")
 
@@ -38,7 +39,7 @@ async def run_ask(agent: OllamaResponsesAgent, message: str, session_id: str):
     
     result = await agent.run(message, ask=True)
     print(f"\n💬 Response:")
-    print(result.final_output)
+    pprint(result.final_output)
     
     print(f"\n💾 Saved to session: {session_id}")
 

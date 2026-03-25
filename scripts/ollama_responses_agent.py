@@ -88,10 +88,12 @@ class OllamaResponsesAgent:
                             If you're given a claim information dictionary, then your job is to suggest a recommendation for how to best proceed.
                             This recommendation can be one of the following options and nothing else: pursue, do_not_pursue, or needs_info. Always use
                             the retrieve_playbook tool to get more information and instructions specific to the type of claim and denial code.
+
+                            If the claim lacks denial text, do not use the predict_with_explain tool.
                             
                             Always use the get_ICD10_code_context and get_CPT_code_context tools to get additional medical context if the denial was due to the procedure was not medically necessary.
 
-                            Ensure format follows output schema specified and JSON format is valid.
+                            Ensure format follows output schema specified and JSON format is correct.
                          """
         )
         
@@ -205,13 +207,10 @@ class OllamaResponsesAgent:
 
             if isinstance(info, str):
                 info = json.loads(info)
-            print('info',info)
-            # icd10_context = [self.icd_10_code_df[self.icd_10_code_df['CODE'] == code]['LONG DESCRIPTION (VALID ICD-10 FY2026)'].to_string(index=False) for code in info['icd10_codes'].split(';')]
             icd10_context = ''
             for code in info['icd10_codes'].split(';'):
                 context_to_add = self.icd_10_code_df[self.icd_10_code_df['CODE'] == code]['LONG DESCRIPTION (VALID ICD-10 FY2026)'].to_string(index=False)
                 icd10_context += context_to_add if len(context_to_add) > 1 else ''
-            print(icd10_context)
             return icd10_context
 
         return FunctionTool(
@@ -233,13 +232,10 @@ class OllamaResponsesAgent:
 
             if isinstance(info, str):
                 info = json.loads(info)
-            print('CPT info',info)
-            # cpt_context = [self.cpt_code_df[self.cpt_code_df['code'] == code] for code in info['cpt_codes'].split(';')]
             cpt_context = ''
             for code in info['cpt_codes'].split(';'):
                 context_to_add = self.cpt_code_df[self.cpt_code_df['CODE'] == code]['DEFINITION'].to_string(index=False)
                 cpt_context += context_to_add if len(context_to_add) > 1 else ''
-            print(cpt_context)
             return cpt_context
 
         return FunctionTool(
@@ -270,8 +266,14 @@ class OllamaResponsesAgent:
         -------
         Agent result object
         """
-        if ask:
-            result = await Runner.run(self.question_agent, prompt, session=self.session)
-        else:
-            result = await Runner.run(self.agent, prompt, session=self.session)
-        return result
+        for attempt in range(5):
+            try:
+                if ask:
+                    result = await Runner.run(self.question_agent, prompt, session=self.session)
+                else:
+                    result = await Runner.run(self.agent, prompt, session=self.session)
+                return result
+            except Exception as e:
+                print('Model error:', e)
+                prompt = 'The previous JSON output failed due to {e}, please fix' + prompt
+            
