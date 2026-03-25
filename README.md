@@ -3,18 +3,19 @@
 ## Summary
 An agentic CLI that produces a structured workup for synthetic denied/underpaid claims.
 
-## Deliverables
-
-Submit:
-1) Source code (git repo, can be your branch of this repository)
-2) README with:
-   - how to run
-   - architecture summary
-   - any tradeoffs
-   - any indications that you put thought into this beyond leveraging code agents will be paramount for your application!
-3) Example outputs for 3 claim_ids of your choice
+## Assumptions
+Windows Machine
+Python 3.9.13 installed
+Ollama installed with gpt-oss:20b downloaded
 
 ---
+## Setup
+
+1) Clone this repository
+2) cd into ERISA-AI-Portfolio-Challenge
+3) Create a virtual environment
+4) pip install -r install/requirements.txt
+
 ## Usage
 ```console 
 python scripts/main.py workup --claim-id CLAIM_ID --session-id SESSION_ID
