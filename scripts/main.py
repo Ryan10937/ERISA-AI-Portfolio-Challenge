@@ -31,7 +31,7 @@ async def run_workup(agent: OllamaResponsesAgent, claim_id: str, session_id: str
     print(f"\nResult for {claim_id}:")
     pprint(result.final_output)
     
-    print(f"\n💾 Saved to session: {session_id}")
+    print(f"\nSaved to session: {session_id}")
 
 async def run_ask(agent: OllamaResponsesAgent, message: str, session_id: str):
     """Ask question about existing session."""
