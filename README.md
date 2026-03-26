@@ -16,7 +16,14 @@ Ollama installed with gpt-oss:20b downloaded
 3) Create a virtual environment
 4) pip install -r install/requirements.txt
 
-## Usage
+## Usage: Docker
+```console 
+docker run --gpus all ryan10937/erisa-agent workup --claim-id C-CO45-001 --session-id demo_01
+or
+docker run --gpus all ryan10937/erisa-agent ask --message "Explain your reasoning for those recommended next steps" --session-id demo_01
+```
+
+## Usage: CLI
 ```console 
 python scripts/main.py workup --claim-id CLAIM_ID --session-id SESSION_ID
 or
@@ -24,7 +31,7 @@ python scripts/main.py ask --message "Explain your reasoning for those recommend
 ```
 
 ## Architecture Summary
-The agent analyzes claim denials from claims.csv using a SQLite store and session key for persistent context. It operates in two modes: workup, which outputs structured results per docs/workup_output_schema.json, and ask, which provides human-readable explanations. It employs tools like _predict_denial_taxonomy_tool, _retrieve_playbook_tool, and ICD-10/CPT context gatherers that translate codes into descriptive text, improving clarity for medically unnecessary denial reasons.
+The agent analyzes claim denials from claims.csv using a SQLite store and session key for persistent context. It operates in two modes: workup, which outputs structured results per docs/workup_output_schema.json, and ask, which provides human-readable explanations. It employs tools like _predict_denial_taxonomy_tool, _retrieve_playbook_tool, and ICD-10/CPT context gatherers that translate codes into descriptive text, improving clarity for medically unnecessary denial reasons. 
 
 ---
 
@@ -32,6 +39,7 @@ The agent analyzes claim denials from claims.csv using a SQLite store and sessio
 1) Custom output schema class: strict adherance to the output schema causes a json conversion error about 25% of the time. To solve this, i allow the agent to retry up to 3 times. While this reduces the error rate from 25% to 1.5%, it is slow and more of a bandaid than a solution.
 2) CPT and ICD10 code context: To implement these two context functions, local copies of code-explanation pairs are kept in the data folder. This adds a larger storage footprint to the agent's pipeline and has the potential to become outdated as these codes evolve over time. Given more time, it would be better to find a frequently updated website with these codes + explanations listed.  
 3) Secondary agent call to get tags for playbook: While this adds extra time, the added resilience is a worthy trade.
+4) Containerized application: This is an out-of-the-box solution that utilizes docker to ensure compatibility across various hardware setups. Unfortunately, this does require a one-time 13GB model download that takes a few extra minutes to complete. 
 
 ## Example Output
 
